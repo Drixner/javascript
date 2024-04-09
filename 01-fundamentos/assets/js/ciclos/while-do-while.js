@@ -10,32 +10,11 @@ const carros = [
   "Honda",
   "Citroen",
 ];
+
 let i = 0;
-// while( i < carros.length ) {
-//     console.log( carros[i] );
-//     // i = i + 1;
-//     i++;
-// }
-
-console.warn("While");
-// undefined
-// null
-// false
-while (carros[i]) {
-  if (i === 1) {
-    // break;
-    i++;
-    continue;
-  }
-
+while (i < carros.length) {
   console.log(carros[i]);
   i++;
 }
-
-console.warn("Do While");
-let j = 10;
-
-do {
-  console.log(carros[j]);
-  j++;
-} while (carros[j]);
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(typeof a);

@@ -48,5 +48,8 @@ class Auto {
 
 const carroToyaota = new Auto("toyota", "1893", "amarillo");
 const carroYaris = new Auto("yaris", 1934, "verde");
+const carroMazda = new Auto("mazda", 1934, "verde");
 
 carroToyaota.imprimir();
+carroYaris.imprimir();
+carroMazda.imprimir();

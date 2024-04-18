@@ -46,10 +46,21 @@ class Auto {
   }
 }
 
+class Perro {
+  constructor(raza, edad, color) {
+    this.raza = raza;
+    this.edad = edad;
+    this.color = color;
+  }
+}
+
 const carroToyaota = new Auto("toyota", "1893", "amarillo");
 const carroYaris = new Auto("yaris", 1934, "verde");
 const carroMazda = new Auto("mazda", 1934, "verde");
+let miPerro = new Perro("ronwiler", 34, "Amarillo");
 
 carroToyaota.imprimir();
 carroYaris.imprimir();
 carroMazda.imprimir();
+
+console.log(miPerro.color);

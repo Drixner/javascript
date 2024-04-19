@@ -63,4 +63,4 @@ carroToyaota.imprimir();
 carroYaris.imprimir();
 carroMazda.imprimir();
 
-console.log(miPerro.color);
+console.log(miPerro.color);  metodo2();

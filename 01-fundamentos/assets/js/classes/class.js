@@ -21,3 +21,20 @@ console.log(spiderman);
 
 alberto.quienSoy();
 alberto.miFrase();
+
+
+//libros
+
+class Libro{
+  constructor(titulo, autor, paginas){
+    this.titulo = titulo;
+    this.autor = autor;
+    this.paginas = paginas;
+  }
+  info(){
+    console.log(`el libro ${this.titulo} con ${this.paginas} paginas, fue escrito por ${this.autor}`);
+  }
+}
+
+const libro1 = new Libro("el señor de los anillos", "tolkien", 1000);
+libro1.info();

@@ -1,26 +1,29 @@
 class Producto {
-  constructor(nombre, PrecioVenta, stock) {
+  constructor(nombre, precio, cantidad) {
     this.nombre = nombre;
-    this.PrecioVenta = PrecioVenta;
-    this.stock = stock;
+    this.precio = precio;
+    this.cantidad = cantidad;
   }
-  vender(cantidad) {
-    if (this.stock < cantidad) {
-      console.log("No hay stock suficiente");
-      return;
-    }
-    this.stock -= cantidad;
-    console.log(`Vendiste ${cantidad} ${this.nombre}`);
-  }
-  reabastecer(cantidad) {
-    this.stock += cantidad;
-    console.log(`Reabasteciste ${cantidad} ${this.nombre}`);
-  }
-  // methods
 }
 
-const forro = new Producto("Forro de Cuaderno", 10, 100);
-forro.vender(10);
-console.log(forro.stock);
-forro.reabastecer(20);
-console.log(forro.stock);
+class Inventario {
+  constructor() {
+    this.productos = [];
+  }
+  agregaProducto(nombre, precio, cantidad) {
+    this.productos.push(new Producto(nombre, precio, cantidad));
+  }
+
+  encontrarProducto(nombre) {
+    return this.productos.find(producto => producto.nombre === nombre);
+  }
+
+  venderProducto(nombre, cantidad) {
+    const producto = this.encontrarProducto(nombre);
+    if (producto.cantidad < cantidad) {
+      return 'No hay suficiente cantidad de producto';
+    }
+    producto.cantidad -= cantidad;
+    return producto;
+  }
+}

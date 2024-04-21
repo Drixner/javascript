@@ -19,11 +19,12 @@ class Inventario {
   }
 
   venderProducto(nombre, cantidad) {
-    const producto = this.encontrarProducto(nombre);
-    if (producto.cantidad < cantidad) {
-      return 'No hay suficiente cantidad de producto';
+    let producto = this.encontrarProducto(nombre);
+    if (producto && producto.cantidad >= cantidad) {
+      producto.cantidad -= cantidad;
+      console.log(`Vendido ${cantidad} de ${nombre}. Quedan ${producto.cantidad} en stock.`);
+    } else {
+      console.log('Producto no disponible o stock insuficiente.');
     }
-    producto.cantidad -= cantidad;
-    return producto;
   }
 }

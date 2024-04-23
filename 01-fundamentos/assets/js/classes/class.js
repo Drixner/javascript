@@ -1,30 +1,72 @@
-class Producto {
-  constructor(nombre, precio, cantidad) {
+class Persona {
+  static _conteo = 0;
+  static get conteo() {
+    return Persona._conteo + " instancias";
+  }
+
+  static mensaje() {
+    console.log(this.nombre); // undefined
+    console.log("Hola a todos, soy un método stático");
+  }
+
+  nombre = "";
+  codigo = "";
+  frase = "";
+  comida = "";
+
+  constructor(
+    nombre = "Sin nombre",
+    codigo = "Sin código",
+    frase = "Sin frase",
+  ) {
     this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
+    this.codigo = codigo;
+    this.frase = frase;
+
+    Persona._conteo++;
+  }
+
+  set setComidaFavorita(comida) {
+    this.comida = comida.toUpperCase();
+  }
+  get getComidaFavorita() {
+    return `La comida favorita de ${this.nombre} es ${this.comida}`;
+  }
+
+  quienSoy() {
+    console.log(`Soy ${this.nombre} y mi identidad es ${this.codigo}`);
+  }
+
+  miFrase() {
+    this.quienSoy();
+    console.log(`${this.codigo} dice: ${this.frase}`);
   }
 }
 
-class Inventario {
-  constructor() {
-    this.productos = [];
-  }
-  agregaProducto(nombre, precio, cantidad) {
-    this.productos.push(new Producto(nombre, precio, cantidad));
-  }
+const spiderman = new Persona(
+  "Peter Parker",
+  "Spiderman",
+  "Soy tu amigable vecino Spiderman",
+);
+const ironman = new Persona("Tony Stark", "Ironman", "Yo soy Ironman");
 
-  encontrarProducto(nombre) {
-    return this.productos.find(producto => producto.nombre === nombre);
-  }
+// console.log( ironman );
 
-  venderProducto(nombre, cantidad) {
-    let producto = this.encontrarProducto(nombre);
-    if (producto && producto.cantidad >= cantidad) {
-      producto.cantidad -= cantidad;
-      console.log(`Vendido ${cantidad} de ${nombre}. Quedan ${producto.cantidad} en stock.`);
-    } else {
-      console.log('Producto no disponible o stock insuficiente.');
-    }
-  }
-}
+spiderman.miFrase();
+// ironman.miFrase();
+
+spiderman.setComidaFavorita = "El pie de cereza de la tía May";
+// spiderman.comida = 'Duende Verde';
+
+// console.log( spiderman.getComidaFavorita );
+
+// console.log( spiderman );
+// Persona._conteo = 2;
+console.log("Conteo stático", Persona._conteo);
+console.log(Persona.conteo);
+Persona.mensaje();
+
+Persona.propiedadExterna = "Hola Mundo";
+
+console.log(Persona.propiedadExterna);
+console.log(Persona);

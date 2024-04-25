@@ -14,7 +14,7 @@ class Rectangualo {
 }
 
 const rectangulo = new Rectangualo(18, 48);
-
 rectangulo.calcularArea();
 
-console.log(rectangulo);
+console.log(rectangulo)
+

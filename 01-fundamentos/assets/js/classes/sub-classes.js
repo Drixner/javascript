@@ -33,7 +33,7 @@ class Persona {
     return `La comida favorita de ${this.nombre} es ${this.comida}`;
   }
 
-  quienSoy() {
+  quienSoy() {q
     console.log(`Soy ${this.nombre} y mi identidad es ${this.codigo}`);
   }
 

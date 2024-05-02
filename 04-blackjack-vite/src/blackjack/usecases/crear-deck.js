@@ -2,7 +2,7 @@
 import _ from "underscore";
 
 const crearDeck = (tiposDeCarta, tiposEspeciales) => {
-    let deck = [];
+  let deck = [];
 
   for (let i = 2; i <= 10; i++) {
     for (let tipo of tiposDeCarta) {

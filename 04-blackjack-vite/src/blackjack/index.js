@@ -1,6 +1,5 @@
 import _ from "underscore";
-// import crearDeck from "./usecases/crear-deck";
-
+import crearDeck from "./usecases/crear-deck";
 
 let deck = [];
 const tipos = ["C", "D", "H", "S"];
@@ -13,7 +12,6 @@ let puntosJugador = 0,
 const btnPedir = document.querySelector("#btnPedir");
 const btnDetener = document.querySelector("#btnDetener");
 const btnNuevo = document.querySelector("#btnNuevo");
-
 const divCartasJugador = document.querySelector("#jugador-cartas");
 const divCartasComputadora = document.querySelector("#computadora-cartas");
 

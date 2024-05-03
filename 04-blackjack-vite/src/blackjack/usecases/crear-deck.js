@@ -1,7 +1,17 @@
 // Esta función crea un nuevo deck
 import _ from "underscore";
 
+/**
+ *
+ * @param {array} tiposDeCarta Ejemplo: ['C', 'D', 'H', 'S']
+ * @param {array} tiposEspeciales Ejemplo: ['A', 'J', 'Q', 'K']
+ * @returns {array}
+ *
+ */
+
 const crearDeck = (tiposDeCarta, tiposEspeciales) => {
+  if (!tiposDeCarta) throw new Error("tipos de carta es oblitario");
+
   let deck = [];
 
   for (let i = 2; i <= 10; i++) {
@@ -17,7 +27,6 @@ const crearDeck = (tiposDeCarta, tiposEspeciales) => {
   }
   // console.log( deck );
   deck = _.shuffle(deck);
-  console.log(deck);
   return deck;
 };
 

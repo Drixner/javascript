@@ -2,15 +2,20 @@
 import _ from "underscore";
 
 /**
- *
- * @param {array} tiposDeCarta Ejemplo: ['C', 'D', 'H', 'S']
- * @param {array} tiposEspeciales Ejemplo: ['A', 'J', 'Q', 'K']
- * @returns {array}
+ * Esta funcion crea un nuevo deck
+ * @param {array<String>} tiposDeCarta Ejemplo: ['C', 'D', 'H', 'S']
+ * @param {array<String>} tiposEspeciales Ejemplo: ['A', 'J', 'Q', 'K']
+ * @returns {array<String>}
+ * Regresa un deck de cartas
  *
  */
 
-const crearDeck = (tiposDeCarta, tiposEspeciales) => {
-  if (!tiposDeCarta) throw new Error("tipos de carta es oblitario");
+export const crearDeck = (tiposDeCarta, tiposEspeciales) => {
+  if (!tiposDeCarta || !tiposDeCarta.length === 0) 
+    throw new Error("Los TiposDeCarta es obligatorio como un arreglo de string");
+
+  if (!tiposEspeciales || !tiposEspeciales.length === 0) 
+    throw new Error("Los Tipos Especiales es obligatorio como un arreglo de string");
 
   let deck = [];
 

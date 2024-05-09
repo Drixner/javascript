@@ -3,7 +3,7 @@ import _ from "underscore";
 import { crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHtml
  } from "./usecases";
 
-
+// estos son los valores de las cartas
 let deck = [];
 const tipos = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "Q", "K"];

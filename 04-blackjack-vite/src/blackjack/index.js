@@ -1,5 +1,6 @@
 import _ from "underscore";
 
+// esto permite que se pueda importar el archivo
 import { crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHtml
  } from "./usecases";
 

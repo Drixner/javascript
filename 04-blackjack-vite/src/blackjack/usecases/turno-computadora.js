@@ -32,6 +32,7 @@ export const turnoComputadora = (puntosMinimos, puntosHTML, divCartasComputadora
     }
   } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
 
+  // estos sirve para que se ejecute el setTimeout
   setTimeout(() => {
     if (puntosComputadora === puntosMinimos) {
       alert("Nadie gana :(");

@@ -1,4 +1,4 @@
-import html from "/src/store/app.html?raw";
+import html from "/src/todos/app.html?raw";
 /**
  *
  * @param {String} elementId

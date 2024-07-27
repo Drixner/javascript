@@ -25,6 +25,7 @@ const loadStore =(store) => {
     throw new Error('Not implemented')
 }
 
+// description es un texto que describe la tarea
 const addTodo = (description) => {
     throw new Error('Not implemented')   
 }

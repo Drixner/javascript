@@ -51,13 +51,12 @@ const getCurrentFilter = () => {
 }
 
 export default{
+    addTodo,
+    deleteCompleted,
+    deleteTodo,
+    getCurrentFilter,
     initStore,
     loadStore,
-    addTodo,
-    toggleTodo,
-    deleteTodo,
-    deleteCompleted,
     setFilter,
-    getCurrentFilter,
-    
+    toggleTodo,
 }

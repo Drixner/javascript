@@ -18,6 +18,7 @@ export const App = (elementId) => {
 
   // Esto es un closure, es una funcion que retorna otra funcion
   // Esto es una funcion que retorna otra funcion
+  // este modulo sirve para renderizar la aplicacion
   const displayTodos = () => {
     const todos = todoStore.getTodos(todoStore.getCurrentFilter());
     renderTodos(ElementIDs.TodoList, todos);

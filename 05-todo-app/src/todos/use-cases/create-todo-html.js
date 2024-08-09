@@ -1,9 +1,14 @@
 import { Todo } from '../models/todo.model';
 
+/**
+ *
+ * @param {Todo} todo
+ */
+
 export const createTodoHtml = (todo) => {
-    if (!todo) throw new Error('Todo is required');
-    ArticuloId;
-    const html = `
+  if (!todo) throw new Error('Todo is required');
+  ArticuloId;
+  const html = `
         <li class="completed" data-id="abc">
                 <div class="view">
                     <input class="toggle" type="checkbox" checked>
@@ -14,7 +19,7 @@ export const createTodoHtml = (todo) => {
         </li>
     `;
 
-    const liElement = document.createElement('li');
-    liElement.innerHTML = html;
-    return liElement;
+  const liElement = document.createElement('li');
+  liElement.innerHTML = html;
+  return liElement;
 };

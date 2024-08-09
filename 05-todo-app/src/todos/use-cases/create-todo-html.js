@@ -7,7 +7,6 @@ import { Todo } from '../models/todo.model';
 
 export const createTodoHtml = (todo) => {
   if (!todo) throw new Error('Todo is required');
-  ArticuloId;
   const html = `
         <li class="completed" data-id="abc">
                 <div class="view">
@@ -20,6 +19,7 @@ export const createTodoHtml = (todo) => {
     `;
 
   const liElement = document.createElement('li');
-  liElement.innerHTML = html;
+    liElement.innerHTML = html;
+    
   return liElement;
 };

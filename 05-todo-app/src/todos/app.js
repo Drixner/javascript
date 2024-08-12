@@ -4,6 +4,7 @@ import html from '/src/todos/app.html?raw';
 
 const ElementIDs = {
   TodoList: '.todo-list',
+  NewTodoInput: '#new-todo-input',
 };
 
 /**
@@ -28,4 +29,12 @@ export const App = (elementId) => {
     document.querySelector(elementId).append(app);
     displayTodos();
   })();
+
+  // Referencias HTML
+  const newDescriptionInput = document.querySelector(ElementIDs.NewTodoInput);
+
+  //listeners
+  newDescriptionInput.addEventListener('keyup', (event) => {
+    console.log(event);
+  });
 };

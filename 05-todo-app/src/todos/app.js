@@ -11,6 +11,8 @@ const ElementIDs = {
  * @param {String} elementId
  */
 
+// esto es un comentario de prueba...
+
 export const App = (elementId) => {
   const displayTodos = () => {
     const todos = todoStore.getTodos(todoStore.getCurrentFilter());

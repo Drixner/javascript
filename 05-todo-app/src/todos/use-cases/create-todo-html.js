@@ -7,7 +7,9 @@ import { Todo } from '../models/todo.model';
 
 export const createTodoHtml = (todo) => {
   if (!todo) throw new Error('Todo is required');
+
   const { done, description, id } = todo; //esto se llama destructuring, permite extraer propiedades de un objeto y asignarlas a variables
+
   const html = `
         
         <div class="view">
@@ -20,7 +22,7 @@ export const createTodoHtml = (todo) => {
 
   const liElement = document.createElement('li');
   liElement.innerHTML = html;
-  liElement.setAttribute('data-id', todo.id);
+  liElement.setAttribute('data-id', id);
 
   if (todo.done) liElement.classList.add('completed');
 

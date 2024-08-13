@@ -9,6 +9,7 @@ export const createTodoHtml = (todo) => {
   if (!todo) throw new Error('Todo is required');
 
   const { done, description, id } = todo; //esto se llama destructuring, permite extraer propiedades de un objeto y asignarlas a variables
+  // esto es lo mismo que hacer const done = todo.done; const description = todo.description; const id = todo.id;
 
   const html = `
         

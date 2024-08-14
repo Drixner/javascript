@@ -12,10 +12,8 @@ const ElementIDs = {
  * @param {String} elementId
  */
 
-// esto es un comentario de prueba
-// Esto est otro comentario de prueba...
-
 export const App = (elementId) => {
+  // Esta constante sirve para renderizar el HTML
   const displayTodos = () => {
     const todos = todoStore.getTodos(todoStore.getCurrentFilter());
     renderTodos(ElementIDs.TodoList, todos);
@@ -33,12 +31,23 @@ export const App = (elementId) => {
   // Referencias HTML
   const newDescriptionInput = document.querySelector(ElementIDs.NewTodoInput);
 
+  const todoListUl = document.querySelector(ElementIDs.TodoList);
+
   //listeners
   newDescriptionInput.addEventListener('keyup', (event) => {
     if (event.keyCode !== 13) return;
     if (event.target.value.trim().length === 0) return;
+
     todoStore.addTodo(event.target.value);
     displayTodos();
     event.target.value = '';
+  });
+
+  todoListUl.addEventListener('click', (event) => {
+    const element = event.target.closest('[data-id]');
+
+    todoStore.toggleTodo(element.getAttribute('data-id')); //element.getAtribute('data-id');
+
+    displayTodos();
   });
 };

@@ -35,6 +35,10 @@ export const App = (elementId) => {
 
   //listeners
   newDescriptionInput.addEventListener('keyup', (event) => {
-    console.log(event);
+    if (event.keyCode !== 13) return;
+    if (event.target.value.trim().length === 0) return;
+    todoStore.addTodo(event.target.value);
+    displayTodos();
+    event.target.value = '';
   });
 };

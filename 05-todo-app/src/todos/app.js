@@ -14,7 +14,7 @@ const ElementIDs = {
 
 export const App = (elementId) => {
   // Esta constante sirve para renderizar el HTML
-  y tambien para mostrar los todos
+  //y tambien para mostrar los todos
   const displayTodos = () => {
     const todos = todoStore.getTodos(todoStore.getCurrentFilter());
     renderTodos(ElementIDs.TodoList, todos);

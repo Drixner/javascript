@@ -6,6 +6,7 @@ const Filters = {
   Pending: 'pending',
 };
 
+// esto es una serie de constantes.
 const state = {
   todos: [
     new Todo('piedra del alma'),

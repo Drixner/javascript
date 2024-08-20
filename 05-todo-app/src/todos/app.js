@@ -44,7 +44,7 @@ export const App = (elementId) => {
     displayTodos();
     event.target.value = '';
   });
-
+  //Esto es otro comentario
   todoListUl.addEventListener('click', (event) => {
     const element = event.target.closest('[data-id]');
     todoStore.toggleTodo(element.getAttribute('data-id')); //element.getAtribute('data-id');

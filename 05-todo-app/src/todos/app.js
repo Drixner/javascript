@@ -51,6 +51,7 @@ export const App = (elementId) => {
     displayTodos();
   });
 
+  //Esto sirve para eliminar un todo
   todoListUl.addEventListener('click', (event) => {
     const isDestroyElement = event.target.className === 'destroy';
     const element = event.target.closest('[data-id]');

@@ -29,6 +29,7 @@ export const App = (elementId) => {
     displayTodos();
   })();
   // esto es un mensaje de prueba
+  //esto tambien es un mensaje de prueba
 
   // Referencias HTML
   const newDescriptionInput = document.querySelector(ElementIDs.NewTodoInput);

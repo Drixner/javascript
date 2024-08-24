@@ -54,6 +54,8 @@ const getTodos = (filter = Filters.All) => {
   }
 };
 
+//esto tambien es otro comentario
+
 // description es un texto que describe la tarea
 const addTodo = (description) => {
   if (!description) throw new Error('Description is required');

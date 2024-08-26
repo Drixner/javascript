@@ -64,6 +64,7 @@ const addTodo = (description) => {
   saveStateToLocalStorage();
 };
 
+// el const toggleTodo es una funcion que recibe un id de una tarea
 const toggleTodo = (todoId) => {
   state.todos = state.todos.map((todo) => {
     if (todo.id === todoId) {

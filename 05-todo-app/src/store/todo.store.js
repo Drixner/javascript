@@ -88,6 +88,7 @@ const deleteCompleted = () => {
   saveStateToLocalStorage();
 };
 
+// setFilter sirve para conectarme.
 const setFilter = (newFilter = Filters.All) => {
   state.filter = newFilter;
   saveStateToLocalStorage();

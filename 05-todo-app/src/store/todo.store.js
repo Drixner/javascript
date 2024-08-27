@@ -75,6 +75,9 @@ const toggleTodo = (todoId) => {
   saveStateToLocalStorage();
 };
 // el const deleteTodo es una funcion que recibe un id de una tarea
+
+// y tambine hace un filtro de las tareas que no sean igual al id de la tarea
+
 const deleteTodo = (todoId) => {
   state.todos = state.todos.filter((todo) => todo.id !== todoId);
   saveStateToLocalStorage();

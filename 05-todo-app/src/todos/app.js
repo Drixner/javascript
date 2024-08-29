@@ -6,6 +6,7 @@ const ElementIDs = {
   ClearCompletedButton: '.clear-completed',
   TodoList: '.todo-list',
   NewTodoInput: '#new-todo-input',
+  TodoFilters: '.filtro',
 };
 
 /**
@@ -36,6 +37,7 @@ export const App = (elementId) => {
   const clearCompletedButton = document.querySelector(
     ElementIDs.ClearCompletedButton
   );
+  const filtersLIs = document.querySelector(ElementIDs.TodoFilters);
 
   //listeners
   newDescriptionInput.addEventListener('keyup', (event) => {
@@ -46,7 +48,7 @@ export const App = (elementId) => {
     displayTodos();
     event.target.value = '';
   });
-  //Esto es otro comentario
+
   todoListUl.addEventListener('click', (event) => {
     const element = event.target.closest('[data-id]');
     todoStore.toggleTodo(element.getAttribute('data-id')); //element.getAtribute('data-id');
@@ -61,10 +63,18 @@ export const App = (elementId) => {
 
     todoStore.deleteTodo(element.getAttribute('data-id')); //element.getAtribute('data-id');
     displayTodos();
+  });
 
-    clearCompletedButton.addEventListener('click', () => {
-      todoStore.deleteCompleted();
-      displayTodos();
+  clearCompletedButton.addEventListener('click', () => {
+    todoStore.deleteCompleted();
+    displayTodos();
+  });
+
+  filtersLIs.forEach((element) => {
+    element.addEventListener('click', (element) => {
+      filtersLIs.forEach((el) => el.classList.remove('selected'));
+      element.target.classList.add('selected');
     });
   });
+  // End listeners
 };

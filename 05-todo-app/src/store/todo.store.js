@@ -1,25 +1,25 @@
 import { Todo } from '../todos/models/todo.model';
 
-const Filters = {
+export const Filters = {
   All: 'all',
-  completed: 'completed',
-  Pending: 'pending',
+  Completed: 'Completed',
+  Pending: 'Pending',
 };
 
-// esto es una serie de constantes.
 const state = {
   todos: [
-    new Todo('piedra del alma'),
-    new Todo('piedra del tiempo'),
-    new Todo('piedra del espacio'),
-    new Todo('piedra de la mente'),
+    new Todo('Pieda del alma'),
+    new Todo('Pieda del espacio'),
+    new Todo('Pieda del tiempo'),
+    new Todo('Pieda del poder'),
+    new Todo('Pieda del realidad'),
   ],
   filter: Filters.All,
 };
 
 const initStore = () => {
   loadStore();
-  console.log('store initialized');
+  console.log('InitStore 🥑');
 };
 
 const loadStore = () => {
@@ -28,13 +28,11 @@ const loadStore = () => {
   const { todos = [], filter = Filters.All } = JSON.parse(
     localStorage.getItem('state')
   );
-
   state.todos = todos;
   state.filter = filter;
 };
 
 const saveStateToLocalStorage = () => {
-  // console.log(JSON.stringify(state));
   localStorage.setItem('state', JSON.stringify(state));
 };
 
@@ -43,20 +41,21 @@ const getTodos = (filter = Filters.All) => {
     case Filters.All:
       return [...state.todos];
 
-    case Filters.completed:
+    case Filters.Completed:
       return state.todos.filter((todo) => todo.done);
 
     case Filters.Pending:
       return state.todos.filter((todo) => !todo.done);
 
     default:
-      throw new Error(`Filter ${filter} is not supported`);
+      throw new Error(`Option ${filter} is not valid.`);
   }
 };
 
-//esto tambien es otro comentario
-
-// description es un texto que describe la tarea
+/**
+ *
+ * @param {String} description
+ */
 const addTodo = (description) => {
   if (!description) throw new Error('Description is required');
   state.todos.push(new Todo(description));
@@ -64,7 +63,10 @@ const addTodo = (description) => {
   saveStateToLocalStorage();
 };
 
-// el const toggleTodo es una funcion que recibe un id de una tarea
+/**
+ *
+ * @param {String} todoId
+ */
 const toggleTodo = (todoId) => {
   state.todos = state.todos.map((todo) => {
     if (todo.id === todoId) {
@@ -72,11 +74,9 @@ const toggleTodo = (todoId) => {
     }
     return todo;
   });
+
   saveStateToLocalStorage();
 };
-// el const deleteTodo es una funcion que recibe un id de una tarea
-
-// y tambine hace un filtro de las tareas que no sean igual al id de la tarea
 
 const deleteTodo = (todoId) => {
   state.todos = state.todos.filter((todo) => todo.id !== todoId);
@@ -88,7 +88,10 @@ const deleteCompleted = () => {
   saveStateToLocalStorage();
 };
 
-// setFilter sirve para conectarme.
+/**
+ *
+ * @param {Filters} newFilter
+ */
 const setFilter = (newFilter = Filters.All) => {
   state.filter = newFilter;
   saveStateToLocalStorage();

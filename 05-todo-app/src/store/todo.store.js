@@ -51,6 +51,7 @@ const getTodos = (filter = Filters.All) => {
       throw new Error(`Option ${filter} is not valid.`);
   }
 };
+// esto no es un función.
 // esto es otro comentario.
 /**
  *

@@ -2,13 +2,16 @@ import todoStore, { Filters } from '../../store/todo.store';
 
 let element;
 /**
- *
- * @param {String} elementId
+ * 
+ * @param {String} elementId 
  */
-export const renderPending = (elementId) => {
-  if (!element) element = document.querySelector(elementId);
+export const renderPending = ( elementId ) => {
 
-  if (!element) throw new Error(`Element ${elementId} not found`);
+    if ( !element ) 
+        element = document.querySelector( elementId );
 
-  element.innerHTML = todoStore.getTodos(Filters.Pending).length;
-};
+    if ( !element )
+        throw new Error(`Element ${ elementId } not found`);
+
+    element.innerHTML = todoStore.getTodos( Filters.Pending ).length;
+}

@@ -35,7 +35,7 @@ const loadStore = () => {
 const saveStateToLocalStorage = () => {
   localStorage.setItem('state', JSON.stringify(state));
 };
-
+//esto es otro comentario
 const getTodos = (filter = Filters.All) => {
   switch (filter) {
     case Filters.All:

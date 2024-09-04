@@ -5,6 +5,8 @@ let element;
  * 
  * @param {String} elementId 
  */
+
+// esta constante renderPending es una función que recibe un elementoId, si el elemento no existe, se busca en el DOM, si no existe se lanza un error, si existe se le asigna el valor de la cantidad de tareas pendientes que se obtiene del store de tareas, que se obtiene con el método getTodos, que recibe como parámetro el filtro de tareas pendientes, que se importa del store de tareas.
 export const renderPending = ( elementId ) => {
 
     if ( !element ) 

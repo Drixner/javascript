@@ -101,6 +101,7 @@ const getCurrentFilter = () => {
   return state.filter;
 };
 
+// Exportamos las funciones que queremos que sean accesibles desde fuera
 export default {
   addTodo,
   deleteCompleted,

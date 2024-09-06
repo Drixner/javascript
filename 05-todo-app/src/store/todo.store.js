@@ -88,6 +88,7 @@ const deleteCompleted = () => {
   saveStateToLocalStorage();
 };
 
+// const setFilter es una función que recibe un argumento newFilter que por defecto es Filters.All
 /**
  *
  * @param {Filters} newFilter

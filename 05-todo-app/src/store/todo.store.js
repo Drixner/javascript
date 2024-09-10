@@ -79,6 +79,8 @@ const toggleTodo = (todoId) => {
   saveStateToLocalStorage();
 };
 
+// esto es una constate deleteTodo que recibe un argumento todoId
+
 const deleteTodo = (todoId) => {
   state.todos = state.todos.filter((todo) => todo.id !== todoId);
   saveStateToLocalStorage();

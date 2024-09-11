@@ -4,9 +4,7 @@ export const Filters = {
   All: "all",
   Completed: "Completed",
   Pending: "Pending",
-};
-
-//const state es un objeto que tiene dos propiedades, todos y filter. Todos es un array de objetos de la clase Todo y filter es un string, que por defecto es Filters.All. Filters es un objeto que tiene tres propiedades, All, Completed y Pending, que son strings. 
+}; 
 const state = {
   todos: [
     new Todo("Pieda del alma"),

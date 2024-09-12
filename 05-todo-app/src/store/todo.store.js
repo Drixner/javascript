@@ -4,7 +4,8 @@ export const Filters = {
   All: "all",
   Completed: "Completed",
   Pending: "Pending",
-}; 
+};
+
 const state = {
   todos: [
     new Todo("Pieda del alma"),
@@ -30,7 +31,7 @@ const loadStore = () => {
   state.todos = todos;
   state.filter = filter;
 };
-
+// saveStateToLocalStorage es una función que guarda en el localStorage el estado actual de la aplicación
 const saveStateToLocalStorage = () => {
   localStorage.setItem("state", JSON.stringify(state));
 };

@@ -36,6 +36,7 @@ const saveStateToLocalStorage = () => {
   localStorage.setItem("state", JSON.stringify(state));
 };
 
+// getTodos es una función que recibe un argumento filter que por defecto es Filters.All
 const getTodos = (filter = Filters.All) => {
   switch (filter) {
     case Filters.All:

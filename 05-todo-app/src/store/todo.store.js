@@ -6,6 +6,7 @@ export const Filters = {
   Pending: "Pending",
 };
 
+// state es un objeto que tiene una propiedad todos que es un array de objetos de la clase Todo y una propiedad filter que es un string
 const state = {
   todos: [
     new Todo("Pieda del alma"),

@@ -1,40 +1,40 @@
-import { Todo } from "../todos/models/todo.model";
+import { Todo } from '../todos/models/todo.model';
 
 export const Filters = {
-  All: "all",
-  Completed: "Completed",
-  Pending: "Pending",
+  All: 'all',
+  Completed: 'Completed',
+  Pending: 'Pending',
 };
 
 // state es un objeto que tiene una propiedad todos que es un array de objetos de la clase Todo y una propiedad filter que es un string
 const state = {
   todos: [
-    new Todo("Pieda del alma"),
-    new Todo("Pieda del espacio"),
-    new Todo("Pieda del tiempo"),
-    new Todo("Pieda del poder"),
-    new Todo("Pieda del realidad"),
+    new Todo('Pieda del alma'),
+    new Todo('Pieda del espacio'),
+    new Todo('Pieda del tiempo'),
+    new Todo('Pieda del poder'),
+    new Todo('Pieda del realidad'),
   ],
   filter: Filters.All,
 };
 
 const initStore = () => {
   loadStore();
-  console.log("InitStore 🥑");
+  console.log('InitStore 🥑');
 };
 
 const loadStore = () => {
-  if (!localStorage.getItem("state")) return;
+  if (!localStorage.getItem('state')) return;
 
   const { todos = [], filter = Filters.All } = JSON.parse(
-    localStorage.getItem("state"),
+    localStorage.getItem('state')
   );
   state.todos = todos;
   state.filter = filter;
 };
 // saveStateToLocalStorage es una función que guarda en el localStorage el estado actual de la aplicación
 const saveStateToLocalStorage = () => {
-  localStorage.setItem("state", JSON.stringify(state));
+  localStorage.setItem('state', JSON.stringify(state));
 };
 
 // getTodos es una función que recibe un argumento filter que por defecto es Filters.All
@@ -59,7 +59,7 @@ const getTodos = (filter = Filters.All) => {
  * @param {String} description
  */
 const addTodo = (description) => {
-  if (!description) throw new Error("Description is required");
+  if (!description) throw new Error('Description is required');
   state.todos.push(new Todo(description));
 
   saveStateToLocalStorage();

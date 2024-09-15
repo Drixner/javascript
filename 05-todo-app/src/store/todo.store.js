@@ -7,6 +7,7 @@ export const Filters = {
 };
 
 // state es un objeto que tiene una propiedad todos que es un array de objetos de la clase Todo y una propiedad filter que es un string
+// Esto es comentario mas sobre el estado de la aplicación, en este caso se tiene un array de objetos de la clase Todo y un string
 const state = {
   todos: [
     new Todo('Pieda del alma'),

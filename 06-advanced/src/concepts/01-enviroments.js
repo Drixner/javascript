@@ -11,7 +11,7 @@ export const environmentsComponent = (element) => {
             Prod: ${env.PROD} <br/>
             Key: ${env.VITE_API_KEY} <br/>
             URL: ${env.VITE_BASE_URL} <br/>
-            URL: ${env.VITE_BASE_URL} <br/>
+            URL: ${env.VITE}
     `;
   element.innerHTML = html;
 };

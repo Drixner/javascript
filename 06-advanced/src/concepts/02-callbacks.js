@@ -12,7 +12,7 @@ export const callbacksComponent = (element) => {
     });
 }
 
-
+//  esto es un comentario
 /**
  * 
  * @param {String} id 

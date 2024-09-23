@@ -11,7 +11,7 @@ export const callbacksComponent = (element) => {
         element.innerHTML = name;
     });
 }
-
+// esto es un comentario
 /**
  * 
  * @param {String} id 

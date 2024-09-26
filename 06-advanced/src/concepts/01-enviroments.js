@@ -4,6 +4,8 @@
  */
 
 // esto es un comentario
+
+// Esto es otro comentario
 export const environmentsComponent = (element) => {
   const env = import.meta.env;
   console.log(env);

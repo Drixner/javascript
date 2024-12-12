@@ -1,6 +1,10 @@
 let videoJuegos = ['Mario 3', 'Megaman', 'Chrono Trigger'];
 
-console.log({videoJuegos});
+let consolas = ['Switch', 'PS4', 'Xbox', '3DS'];
+
+console.log(videoJuegos)
+
+console.log({videoJuegos, consolas});
 console.log(videoJuegos[1]);
 
 // En JavaScript, las llaves {} se utilizan para crear un objeto. Cuando haces console.log({videoJuegos}), estás creando un objeto con una propiedad llamada videoJuegos y luego lo estás imprimiendo en la consola.

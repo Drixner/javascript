@@ -1,11 +1,11 @@
-let videoJuegos = ['Mario 3', 'Megaman', 'Chrono Trigger'];
+// let videoJuegos = ['Mario 3', 'Megaman', 'Chrono Trigger'];
 
-let consolas = ['Switch', 'PS4', 'Xbox', '3DS'];
+// let consolas = ['Switch', 'PS4', 'Xbox', '3DS'];
 
-console.log(videoJuegos)
+// console.log(videoJuegos)
 
-console.log({videoJuegos, consolas});
-console.log(videoJuegos[1]);
+// console.log({videoJuegos, consolas});
+// console.log(videoJuegos[1]);
 
 // En JavaScript, las llaves {} se utilizan para crear un objeto. Cuando haces console.log({videoJuegos}), estás creando un objeto con una propiedad llamada videoJuegos y luego lo estás imprimiendo en la consola.
 
@@ -30,12 +30,16 @@ let arregloCosas = [
     123,
     'Fernando',
     1 + 2,
-    function(){},
-    () => {},
-    ['X', 'Megaman', 'Zero', 'Dr. Light', ['Dr. Willy', 'Woodman']],
+    function () { },
+    () => { },
+    { a: 1 }, //esto es un objeto literal
+    ['X', 'Megaman', 'Zero', 'Dr. Light'],  ['Dr. Willy', 'Woodman'],
 ];
 
-console.log(arregloCosas)
+console.log({ arregloCosas })
 
-console.log(arregloCosas[6][3]) // esto permite acceder a la posición 3 del arreglo que está en la posición 6 del arregloCosas
-console.log(arregloCosas[6][4][1]) // esto permite acceder a la posición 1 del arreglo que está en la posición 4 del arreglo que está en la posición 6 del arregloCosas
+console.log({Eroes:arregloCosas[7][3]})
+
+
+// console.log(arregloCosas[6][3]) // esto permite acceder a la posición 3 del arreglo que está en la posición 6 del arregloCosas
+// console.log(arregloCosas[6][4][1]) // esto permite acceder a la posición 1 del arreglo que está en la posición 4 del arreglo que está en la posición 6 del arregloCosas

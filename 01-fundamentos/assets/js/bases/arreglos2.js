@@ -9,6 +9,10 @@ console.log('Último elemento:', juegos[juegos.length - 1]); // accedemos al úl
 juegos.forEach((elemento, indice, arr) => {
     console.log({elemento, indice, arr});
 }) // recorremos el arreglo con el método forEach
+
+juegos.forEach((a, b, c) => {
+    console.log(a,b,c)
+})
  
 let nuevaLongitud = juegos.push('F-Zero');
 console.log({nuevaLongitud, juegos}) // el método push añade un elemento al final del arreglo y devuelve la nueva longitud del arreglo

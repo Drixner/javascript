@@ -30,4 +30,4 @@ console.log({juegosBorrados, juegos}) // el método splice elimina elementos del
 let indiceChorno = juegos.indexOf("chrono")
 console.log({indiceChorno}) // el método indexOf nos devuelve el índice de un elemento en el arreglo
 
-//TODO: Refencia 
+//TODO: esto mas referencia a Arreglos

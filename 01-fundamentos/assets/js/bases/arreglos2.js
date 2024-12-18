@@ -8,7 +8,7 @@ console.log('Último elemento:', juegos[juegos.length - 1]); // accedemos al úl
 
 juegos.forEach((elemento, indice, arr) => {
     console.log({elemento, indice, arr});
-}) // recorremos el arreglo con el método forEach
+}) // recorremos el arreglo con el método forEach recorremos
 
 juegos.forEach((a, b, c) => {
     console.log(a,b,c)

@@ -24,9 +24,7 @@ Object.freeze(personaje); // Congela el objeto, no se puede modificar, solo cong
 
 personaje.dinero = 100000000;
 personaje.casado = true;
-
 console.log(personaje);
-
 const propiedad = Object.getOwnPropertyNames(personaje); // Obtiene las propiedades del objeto, incluyendo las que no son enumerables
 
 const valores = Object.values(personaje); // Obtiene los valores del objeto

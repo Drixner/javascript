@@ -61,3 +61,4 @@ let AnimalesMarinos = {
 const x = "Color";
 
 console.log({ Carros: carros });
+console.log({ AnimalesMarinos });

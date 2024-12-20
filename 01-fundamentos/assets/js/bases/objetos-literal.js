@@ -58,4 +58,6 @@ let AnimalesMarinos = {
   Color: "Gris",
 };
 
+const x = "Color";
+
 console.log({ Carros: carros });

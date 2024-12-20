@@ -50,4 +50,12 @@ let carros = {
   Anio: 2021,
 };
 
+let AnimalesMarinos = {
+  Nombre: "Tiburon",
+  Habitat: "Marino",
+  Peso: 500,
+  Longitud: 5,
+  Color: "Gris",
+};
+
 console.log({ Carros: carros });

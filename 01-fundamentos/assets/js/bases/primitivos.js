@@ -12,6 +12,7 @@ let esMarvel = false
 // esto es otro comentario
 console.log(typeof esMarvel);
 
+// esto  es otro comentario
 let edad = 15
 console.log(edad);
 

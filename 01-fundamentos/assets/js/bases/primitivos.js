@@ -1,27 +1,26 @@
-let nombre = 'Juan'
-console.log(nombre)
+let nombre = 'Rafael';
+console.log(nombre);
 
+nombre = 'Drixner'
 
-nombre = 'Parker'
-console.log(nombre)
+console.log(nombre);
 
-console.log(typeof nombre)
+nombre = 'tia jeje'
+console.log(nombre);
 
-nombre = 123
-console.log(typeof nombre)
+let esMarvel = false
 
-let esMarvel = false //esto es booleano
-console.log(typeof esMarvel)
+console.log(typeof esMarvel);
 
-let superPoder;//esto es undefined porque no tiene valor
-console.log(typeof superPoder)
+let edad = 15
+console.log(edad);
 
-let soyNull = null
-console.log(typeof soyNull) //esto es un objeto, pero es un error de javascript
+let superPoder;
+console.log(typeof superPoder);
 
-let symbol1 = Symbol('a')
-console.log(typeof symbol1)
-let symbol2 = Symbol('a')
-console.log(typeof symbol2) // Symbol es un tipo de dato primitivo, permite crear identificadores unicos
+let sonNull = null;
+console.log(typeof sonNull);
 
-console.log(symbol1 === symbol2) //false, porque son identificadores unicos
+let symboll = Symbol('drixner');
+let symboll2 = Symbol('drixner');
+console.log( typeof symboll);

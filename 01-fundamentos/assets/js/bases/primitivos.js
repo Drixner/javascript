@@ -9,7 +9,7 @@ nombre = 'tia jeje'
 console.log(nombre);
 
 let esMarvel = false
-
+// comentario mas
 console.log(typeof esMarvel);
 
 let edad = 15

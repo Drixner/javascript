@@ -1,19 +1,19 @@
-// let personaje = {
-//   nombre: "Tony Stark",
-//   codeName: "Ironman",
-//   vivo: false,
-//   edad: 40,
-//   coords: {
-//     lat: 34.034,
-//     lng: -118.7,
-//   },
-//   trajes: ["Mark I", "Mark V", "Hulkbuster"],
-//   direccion: {
-//     zip: "10880, 90265",
-//     ubicacion: "Malibu, California",
-//   },
-//   "ultima-pelicula": "Infinity War",
-// };
+let personaje = {
+  nombre: "Tony Stark",
+  codeName: "Ironman",
+  vivo: false,
+  edad: 40,
+  coords: {
+    lat: 34.034,
+    lng: -118.7,
+  },
+  trajes: ["Mark I", "Mark V", "Hulkbuster"],
+  direccion: {
+    zip: [1923, 1123],
+    ubicacion: "Malibu, California",
+  },
+  ultima_pelicula: "Infinity War",
+};
 
 // let carros = {
 //   marca: "toyota",
@@ -58,7 +58,37 @@ let AnimalesMarinos = {
   Color: "Gris",
 };
 
+let MotocicletasCustom = {
+  Nombre: 'Yamaha',
+  Anio: 1923,
+  NumeroLlantas: 2,
+  Color: 'Marron Claro',
+}
+let LlantasCarros = {
+  Name: 'Carolina',
+  Year: 1923,
+  Color: 'Blue'
+}
+
+
 const x = "Color";
 
-console.log({ Carros: carros });
-console.log({ AnimalesMarinos });
+// console.log({ Carros: carros });
+// console.log({ AnimalesMarinos });
+console.log(MotocicletasCustom.Nombre)
+console.log('Color de la llanta es: ', LlantasCarros.Color)
+console.log({ LlantasCarros })
+console.log('Latencia: ', personaje.coords.lat)
+console.log('Direccion: ', personaje.direccion.zip[0])
+
+MotocicletasCustom.AnioFabricacion = 1239
+
+const Motos = Object.entries(MotocicletasCustom)
+console.log(Motos)
+
+const propriedades = Object.getOwnPropertyNames(MotocicletasCustom)
+
+const valores = Object.values(MotocicletasCustom)
+
+console.log({ propriedades, valores })
+console.log(propriedades, valores)

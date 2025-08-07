@@ -1,45 +1,25 @@
-function saludar( nombre ){
-    console.log("Hola " + nombre);
-    return 2;
-} // Funcion declarativa
+//Primera forma de declarar una funcion
+function saludar(nombre) {
+  console.log('Hola ' + nombre)
+}
+saludar('Drixner')
+console.log('__________________________')
 
+//Segunda forma de declarar y llamar a una funcion
 
-// const saludar2 = function(){
-//     console.log("Hola mundo");
-// } // Funcion anonima
-
-const saludarFlecha = ( nombre ) => {
-    console.log("Hola " + nombre);
-} // Funcion flecha 
-
-let saludarFlecha2 = ( nombre ) => console.log("Hola " + nombre); // Funcion flecha,  las funciones flecha tienen una característica especial: si el cuerpo de la función solo tiene una expresión, puedes omitir las llaves {} y la palabra clave return. El valor de la expresión se devolverá automáticamente.
-
-
-
-let retornoSaludar = saludar('Drixner') // estos equivale al retorno de la funcion que facilmente se puede almacenar en una variable
-
-console.log({retornoSaludar});
-
-
-let getAleatorio = () => Math.random();
-console.log(getAleatorio());
-
-
-
-function getAleatorio1(){
-    return Math.random();
+const saludar2 = function(ElNombre) {
+  console.log('Hola ' + ElNombre)
 }
 
-console.log(getAleatorio1());
+saludar2('Rafael')
+console.log('__________________________')
 
-//otras forma de hacer una funcion flecha sin usar llaves con el metodo random
+const apellido = (Apellido) => {
+  console.log('Este es el Apellido: ' + Apellido)
+}
 
-let getAleatorio2 = () => Math.random();
-console.log(getAleatorio2());
+apellido('Condor Tadeo')
 
+const getAleatorio2 = () => Math.random()
 
-
-
-saludarFlecha('Rafael');
-
-saludarFlecha2('Drixner');
+console.log(getAleatorio2())

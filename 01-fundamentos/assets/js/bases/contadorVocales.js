@@ -11,4 +11,10 @@ for (const letra of letras) {
   }
 }
 
+const construccionCasa = (moneda) => {
+  console.log(`Esta es la moneda ps causas ${moneda}`)
+}
+
 console.log(`La cantidad de vocales que tiene ${palabraIngresada} es de ${contadorVocales} :)`)
+
+console.log('Hola Mundo')
